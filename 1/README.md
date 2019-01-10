@@ -151,19 +151,19 @@ __Теорема Вольда__: Любой стационарный ряд мо
 
 1. Пусть у нас есть модель с побобранными параметрами: 
 
-<img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y_t=\hat{\alpha}&space;&plus;&space;\hat{\phi}_1&space;y_{t-1}&space;&plus;...&plus;&space;\hat{\phi}_p&space;y_{t-p}&space;&plus;&space;\varepsilon_t&space;&plus;&space;\hat{\theta}_1&space;\varepsilon_{t-1}&space;&plus;&space;...&space;&plus;&space;\hat{\theta}_q&space;\varepsilon_{t-q}}" title="{\color{DarkOrange} y_t=\hat{\alpha} + \hat{\phi}_1 y_{t-1} +...+ \hat{\phi}_p y_{t-p} + \varepsilon_t + \hat{\theta}_1 \varepsilon_{t-1} + ... + \hat{\theta}_q \varepsilon_{t-q}}" /> 
+   <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y_t=\hat{\alpha}&space;&plus;&space;\hat{\phi}_1&space;y_{t-1}&space;&plus;...&plus;&space;\hat{\phi}_p&space;y_{t-p}&space;&plus;&space;\varepsilon_t&space;&plus;&space;\hat{\theta}_1&space;\varepsilon_{t-1}&space;&plus;&space;...&space;&plus;&space;\hat{\theta}_q&space;\varepsilon_{t-q}}" title="{\color{DarkOrange} y_t=\hat{\alpha} + \hat{\phi}_1 y_{t-1} +...+ \hat{\phi}_p y_{t-p} + \varepsilon_t + \hat{\theta}_1 \varepsilon_{t-1} + ... + \hat{\theta}_q \varepsilon_{t-q}}" /> 
 
 2. Для того чтобы построить прогноз на момент времени T+1, нужно просто в этом уравнении для начала заменить все индексы t на T+1: 
 
-<img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y_t=\hat{\alpha}&space;&plus;&space;\hat{\phi}_1&space;y_{T}&space;&plus;...&plus;&space;\hat{\phi}_p&space;y_{T&plus;1-p}&space;&plus;&space;\varepsilon_{T&plus;1}&space;&plus;&space;\hat{\theta}_1&space;\varepsilon_{T}&space;&plus;&space;...&space;&plus;&space;\hat{\theta}_q&space;\varepsilon_{T&plus;1-q}}" title="{\color{DarkOrange} y_t=\hat{\alpha} + \hat{\phi}_1 y_{T} +...+ \hat{\phi}_p y_{T+1-p} + \varepsilon_{T+1} + \hat{\theta}_1 \varepsilon_{T} + ... + \hat{\theta}_q \varepsilon_{T+1-q}}" />
+   <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y_t=\hat{\alpha}&space;&plus;&space;\hat{\phi}_1&space;y_{T}&space;&plus;...&plus;&space;\hat{\phi}_p&space;y_{T&plus;1-p}&space;&plus;&space;\varepsilon_{T&plus;1}&space;&plus;&space;\hat{\theta}_1&space;\varepsilon_{T}&space;&plus;&space;...&space;&plus;&space;\hat{\theta}_q&space;\varepsilon_{T&plus;1-q}}" title="{\color{DarkOrange} y_t=\hat{\alpha} + \hat{\phi}_1 y_{T} +...+ \hat{\phi}_p y_{T+1-p} + \varepsilon_{T+1} + \hat{\theta}_1 \varepsilon_{T} + ... + \hat{\theta}_q \varepsilon_{T+1-q}}" />
 
 3. Заменяем будущие ошибки на нули: 
 
-<img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y_t=\hat{\alpha}&space;&plus;&space;\hat{\phi}_1&space;y_{T}&space;&plus;...&plus;&space;\hat{\phi}_p&space;y_{T&plus;1-p}&space;&plus;&space;\hat{\theta}_1&space;\varepsilon_{T}&space;&plus;&space;...&space;&plus;&space;\hat{\theta}_q&space;\varepsilon_{T&plus;1-q}}" title="{\color{DarkOrange} y_t=\hat{\alpha} + \hat{\phi}_1 y_{T} +...+ \hat{\phi}_p y_{T+1-p} + \hat{\theta}_1 \varepsilon_{T} + ... + \hat{\theta}_q \varepsilon_{T+1-q}}" />
+   <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y_t=\hat{\alpha}&space;&plus;&space;\hat{\phi}_1&space;y_{T}&space;&plus;...&plus;&space;\hat{\phi}_p&space;y_{T&plus;1-p}&space;&plus;&space;\hat{\theta}_1&space;\varepsilon_{T}&space;&plus;&space;...&space;&plus;&space;\hat{\theta}_q&space;\varepsilon_{T&plus;1-q}}" title="{\color{DarkOrange} y_t=\hat{\alpha} + \hat{\phi}_1 y_{T} +...+ \hat{\phi}_p y_{T+1-p} + \hat{\theta}_1 \varepsilon_{T} + ... + \hat{\theta}_q \varepsilon_{T+1-q}}" />
 
 4. Заменяем прошлые ошибки на остатки:
 
-<img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y_t=\hat{\alpha}&space;&plus;&space;\hat{\phi}_1&space;y_{T}&space;&plus;...&plus;&space;\hat{\phi}_p&space;y_{T&plus;1-p}&space;&plus;&space;\hat{\theta}_1&space;\hat{\varepsilon}_{T}&space;&plus;&space;...&space;&plus;&space;\hat{\theta}_q&space;\hat{\varepsilon}_{T&plus;1-q}}" title="{\color{DarkOrange} y_t=\hat{\alpha} + \hat{\phi}_1 y_{T} +...+ \hat{\phi}_p y_{T+1-p} + \hat{\theta}_1 \hat{\varepsilon}_{T} + ... + \hat{\theta}_q \hat{\varepsilon}_{T+1-q}}" />
+   <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y_t=\hat{\alpha}&space;&plus;&space;\hat{\phi}_1&space;y_{T}&space;&plus;...&plus;&space;\hat{\phi}_p&space;y_{T&plus;1-p}&space;&plus;&space;\hat{\theta}_1&space;\hat{\varepsilon}_{T}&space;&plus;&space;...&space;&plus;&space;\hat{\theta}_q&space;\hat{\varepsilon}_{T&plus;1-q}}" title="{\color{DarkOrange} y_t=\hat{\alpha} + \hat{\phi}_1 y_{T} +...+ \hat{\phi}_p y_{T+1-p} + \hat{\theta}_1 \hat{\varepsilon}_{T} + ... + \hat{\theta}_q \hat{\varepsilon}_{T+1-q}}" />
 
 
 ## название
