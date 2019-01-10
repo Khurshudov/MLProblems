@@ -166,4 +166,33 @@ __Теорема Вольда__: Любой стационарный ряд мо
    <img src="https://latex.codecogs.com/gif.latex?{\color{Red}&space;y_t=\hat{\alpha}&space;&plus;&space;\hat{\phi}_1&space;y_{T}&space;&plus;...&plus;&space;\hat{\phi}_p&space;y_{T&plus;1-p}&space;&plus;&space;\hat{\theta}_1&space;\hat{\varepsilon}_{T}&space;&plus;&space;...&space;&plus;&space;\hat{\theta}_q&space;\hat{\varepsilon}_{T&plus;1-q}}" title="{\color{Red} y_t=\hat{\alpha} + \hat{\phi}_1 y_{T} +...+ \hat{\phi}_p y_{T+1-p} + \hat{\theta}_1 \hat{\varepsilon}_{T} + ... + \hat{\theta}_q \hat{\varepsilon}_{T+1-q}}" />
 
 
-## название
+## Анализ остатков
+
+### Остатки
+
+Остатки - разность между фактом и прогнозом <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;\hat{\varepsilon}_t&space;=&space;y_t&space;-&space;\hat{y}_t}" title="{\color{DarkOrange} \hat{\varepsilon}_t = y_t - \hat{y}_t}" />
+
+Прогнозы <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;\hat{y}_t}" title="{\color{DarkOrange} \hat{y}_t}" /> могут быть построены с фиксированный отсрочкой: <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;\hat{y}_{R&plus;d|R},...,\hat{y}_{T|T-d}}" title="{\color{DarkOrange} \hat{y}_{R+d|R},...,\hat{y}_{T|T-d}}" />, или с фиксированным концом истории при разных отсрочках: <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;\hat{y}_{T-D&plus;1|T-D},...,\hat{y}_{T|T-d}}" title="{\color{DarkOrange} \hat{y}_{T-D+1|T-D},...,\hat{y}_{T|T-d}}" /> 
+
+### Несмещённость 
+
+Несмещённость - равенство среднего значения нулю
+
+* Можно проверить гипотезу с помощью критерия Стьюдента или Уилкерсона
+
+* Если не выполняется, с моделью что-то серьёзно не так
+
+### Стационарность
+
+Стационарность - отстутсвие зависимости от времени
+
+* Можно проверитьс  помощью критерия Дики-Фулера
+* Если не выполняется, значит, модель не одинаково точна в разные периоды
+
+### Неавтокоррелированность
+
+Неавтокоррелированность - отсутсвие неучтенной зависимости от предыдущих значений
+
+* Можно проверить на коррелограмме и с помощью Q-криетрия Льюнга-Бокса
+
+* Если не выполняется, значит, модель учитывает не все особенности данных - возможно, её можно улучшить
