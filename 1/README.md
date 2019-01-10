@@ -36,7 +36,29 @@
 
 ## Стационнарность
 
-Ряд <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y_1,&space;...&space;y_T&space;}" title="{\color{DarkOrange} y_1, ... y_T }" />
+Ряд <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y_1,&space;...&space;y_T&space;}" title="{\color{DarkOrange} y_1, ... y_T }" /> стационарен, если <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;\forall&space;s&space;}" title="{\color{DarkOrange} \forall s }" /> распределение <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y_t,&space;...&space;y_{t+s};}" title="{\color{DarkOrange} y_t, ... y_{t+s} }" /> не зависит от <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange} t}" title="{\color{DarkOrange} t}" />, т.е. его свойства не зависят от времени.
+
+* __Тренд__ - нестационарен;
+* __Сезонность__ - нестационарен;
+* __Цикл__ - ?(нельзя предсказать заранее, где будут находиться максимумы и минимумы);
+
+### Проверка стационарности
+
+Осуществляется с помощью критерия Дики-Фулера
+
+### Стабилизация 
+
+* Для рядов с монотонно меняющейся дисперсией можно использовать стабилизирующие преобразования.
+* Часто используют логарифмирвоание
+* Либо дифференциирование.
+* Дифференциирование ряда - переход к попарным разностям соседних значений: <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y'_t=y_t&space;-&space;y_{t-1}&space;}" title="{\color{DarkOrange} y'_t=y_t - y_{t-1} }" />. Это позволяет стабилизировать среднее значение ряда и избавиться от тренда. Может применяться неоднократно.
+* Либо сезонной дифференциирование ряда - переход к попарным разностям значений в соседних сезонах: <img src="https://latex.codecogs.com/gif.latex?{\color{DarkOrange}&space;y'_t=y_t&space;-&space;y_{t-1}&space;}" title="{\color{DarkOrange} y'_t=y_t - y_{t-s} }" />. Это убирает сезонность.
+
+### Рекомендуемый порядок
+
+* Сезонное и обычное дифференциирования могут применяться к ряду в любом порядке.
+* Если ряд имеет выраженный сезонный профиль, рекомендуется начинать с сезонного дифференциирования - после него ряд уже может оказаться стационарным.
+
 
 ## название
 
